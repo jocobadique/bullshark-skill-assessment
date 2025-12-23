@@ -1,6 +1,18 @@
 import { Input, Select, Checkbox, Space } from "antd";
+import { Dispatch, SetStateAction } from "react";
 
 const { Search } = Input;
+
+interface FiltersProps {
+  search: string;
+  debouncedSearch: string;
+  setSearch: (v: string) => void;
+  category: string;
+  setCategory: (v: string) => void;
+  categories: string[];
+  showFavOnly: boolean;
+  setShowFavOnly: Dispatch<SetStateAction<boolean>>;
+}
 
 export default function Filters({
   search,
@@ -11,7 +23,7 @@ export default function Filters({
   categories,
   showFavOnly,
   setShowFavOnly,
-}: any) {
+}: FiltersProps) {
   const isSearching = search !== debouncedSearch;
 
   return (
@@ -30,13 +42,13 @@ export default function Filters({
         size="large"
         value={category}
         onChange={setCategory}
-        options={categories.map((c: any) => ({ value: c, label: c }))}
+        options={categories.map((c) => ({ value: c, label: c }))}
         style={{ width: 260 }}
       />
 
       <Checkbox
         checked={showFavOnly}
-        onChange={() => setShowFavOnly((prev: any) => !prev)}
+        onChange={() => setShowFavOnly((prev) => !prev)}
       >
         Show favourites only
       </Checkbox>

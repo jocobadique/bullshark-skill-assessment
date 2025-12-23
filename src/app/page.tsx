@@ -54,7 +54,7 @@ export default function Home() {
           padding: 32,
         }}
       >
-        <Title level={3}>Lists of Products</Title>
+        <Title level={3}>List of Products</Title>
 
         <Filters
           search={search}

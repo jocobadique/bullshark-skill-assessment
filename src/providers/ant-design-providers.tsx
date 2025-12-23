@@ -30,6 +30,9 @@ function AntDesignProvider({ defaultTheme, children }: Props) {
     <ConfigProvider
       theme={{
         algorithm: currentTheme === "light" ? defaultAlgorithm : darkAlgorithm,
+        token: {
+          colorPrimary: "#0085C8",
+        },
       }}
     >
       {children}

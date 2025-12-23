@@ -1,13 +1,20 @@
 import { Card, Typography, Button } from "antd";
 import { StarFilled, StarOutlined } from "@ant-design/icons";
+import { Item } from "@/types/item";
 
 const { Text } = Typography;
+
+export interface ItemCardProps {
+  item: Item;
+  isFavourite: boolean;
+  onToggleFavourite: () => void;
+}
 
 export default function ItemCard({
   item,
   isFavourite,
   onToggleFavourite,
-}: any) {
+}: ItemCardProps) {
   return (
     <Card
       title={item.name}
