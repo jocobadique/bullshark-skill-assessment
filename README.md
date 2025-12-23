@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+Bullshark Software Engineer Skill Assessment
+Overview
+
+This project is a small web application built as part of a software engineer skill assessment.
+The app fetches and displays a list of products from a local JSON file, allows users to search, filter, sort items, and mark favourites with persistence via localStorage.
+
+All data and requirements are hypothetical and used solely for assessment purposes.
